@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(123, 191, 243);
+  color: rgb(236, 236, 236);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.resultado {
+  max-width: 8000px;
+  text-align: center;
+  padding: 25px;
+  background-color: rgba(73, 62, 191, 0.652);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: rgb(73, 62, 191);
+  margin-top: 10px;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.botao_voltar {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.botao_voltar:hover {
+  background-color: #217dbb; /* Cor de fundo mais escura ao passar o mouse */
+}

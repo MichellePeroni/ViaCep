@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Aluno</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1><strong>Formulário Aluno</strong></h1>
+
+    <form id="myForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" name="dataNascimento" required />
+
+      <label for="cpf">CPF:</label>
+      <input
+        type="text"
+        id="cpf"
+        name="cpf"
+        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+        placeholder="123.456.789-00"
+        required
+      />
+
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo">
+        <option value="" disabled selected>Selecione...</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+      </select>
+
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso" name="curso" required />
+
+      <label for="modalidade">Modalidade:</label>
+      <select id="modalidade" name="modalidade">
+        <option value="" disabled selected>Selecione...</option>
+        <option value="ead">EAD</option>
+        <option value="hibrido">Híbrido</option>
+        <option value="presencial">Presencial</option>
+      </select>
+
+      <label for="cep">CEP:</label>
+      <div style="display: flex; align-items: center">
+        <input
+          type="text"
+          id="cep"
+          name="cep"
+          pattern="\d{5}-\d{3}"
+          placeholder="12345-678"
+          required
+        />
+        <button type="button" onclick="preencherEndereco()">
+          Pesquisar Endereço
+        </button>
+      </div>
+
+      <label for="endereco" id="enderecoLabel" style="display: none"
+        >Endereço:</label
+      >
+      <input
+        type="text"
+        id="endereco"
+        name="endereco"
+        readonly
+        style="display: none"
+      />
+
+      <label for="bairro" id="bairroLabel" style="display: none">Bairro:</label>
+      <input
+        type="text"
+        id="bairro"
+        name="bairro"
+        readonly
+        style="display: none"
+      />
+
+      <label for="numero" id="numeroLabel" style="display: none"
+        >Número/Complemento:</label
+      >
+      <input type="text" id="numero" name="numero" style="display: none" />
+
+      <button class="botão_enviar" type="button" onclick="enviarFormulario()">
+        Enviar
+      </button>
+    </form>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
